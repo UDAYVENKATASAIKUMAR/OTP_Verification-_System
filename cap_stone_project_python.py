@@ -60,13 +60,13 @@ try:
     def send_otp(valid_email_address):
         s = smtplib.SMTP("smtp.gmail.com",587)
         s.starttls()
-        s.login("vits20731A3152@gmail.com",'rfab irjo uise kcbr')
+        s.login("yourmail@gmail.com",'your_password')
         subject = "OTP verification"
         send = otpnum
         body = "your otp is :" + str(send)
         message = f'subject:{subject}\n\n{body}'
         user_input = valid_email_address
-        s.sendmail('vits20731A3152@gmail.com',user_input,message)
+        s.sendmail('yourmail@gmail.com',user_input,message)
         messagebox.showinfo(title='success',message='OTP sent Successfully')
         s.quit()
 except Exception as e:
